@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplismente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture> 
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    
+    <!--a tag 'picture' permite que você crie vários sources, várias fontes. Você coloca uma tag 'img' dentro dela-->
+
+    <!--a tag 'source:media:type' por padrão indicará 'media="(min-width: )"' mas a gente vai trocar para 'max'-->
+
+    <!--COMO FICA A TAG 'source:media:type' NA FORMA BASE: '<source media="(min-width: )" srcset="" type="image/"''>-->
+
+    <!--Por padrão ele vai carregar a imagem grande, mas se por acaso o seu navegador tiver menos de 1000px (que é o tamanho da imagem grande, 'foto-g', que criamos no gimp de exemplo) ele vai carregar a foto-m.     OBS.: É BOM COLOCAR SEMPRE UNS 50PX A MAIS PARA EVITAR DE APARECER A BARRA DE ROLAGEM EM BAIXO EM MOMENTO ALGUM (por isso está 1050px)-->
+
+    <!--'<source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+    <img src="imagens/foto-g.png" alt="Imagem flexível">'   EXPLICAÇÃO: Ele vai carregar a foto grande, mas se ele for MENOR do que 1050px se ele chegar a menos de 1050px, ele vai carregar a foto-m-->
+
+    <!--OBSERVAÇÃO FINAL: É bom sempre colocar a maior imagem na tag 'img' e ir colocando na tag 'source:media:type' as imagens menores, do maior para o menor, de baixo para cima. Por exemplo:-->
+
+    <!-- PRIMEIRO: criamos a tag 'picture' e dentro dela a tag 'img'. Na tag 'img' colocaremos a maior imagem (no caso a de 1000px), 'foto-g'-->
+
+    <!--SEGUNDO: Em cima da tag 'img' colacaremos a primeira tag 'source:media:type' e dentro dela definiremos o max de px para carregar a maior imagem, no caso da 'foto-g' é 1000px (sempre colocar uns 50px a mais: 1050px), se a tela for MENOR do que o px colocado (1050px), será carregado a segunda imagem, cujo será colocado o nome do arquivo em: 'srcset="imagens/foto-m.png"', a 'foto-m' possui 700px-->
+
+    <!--TERCEIRO: Em cima do primeiro 'source:media:type', colocaremos mais um 'source:media:type' e nele colocaremos o max de px da imagem abaixo, no caso 'foto-m' que possui 700px (colocar 750px)   se a tela for MENOR do que o px colocado (750px), será carregado a imagem que colocamos em: 'srcset="imagens/foto-p.png"', a 'foto-p' possui 300px-->
+
+    <!--RESUMINDO: A GENTE VAI FAZENDO TUDO DE BAIXO PARA CIMA, COMEÇANDO COM A MAIOR IMAGEM E SUBINDO PARA A MENOR ATÉ CHEGAR NA MENOR IMAGEM DE TODAS-->
+
+    <h1>Reproduzindo Audio</h1>
+    <p>Vamos aprender a reproduzir audio em HTML5.</p>
+    <audio src="midia/sour-tennessee-red-song.mp3" controls autoplay></audio>
+    
+    <!--Para adicionar uma audio no site utilize a tag 'audio' para que você possa reproduzi-lo no site é preciso colocar o paramentro: autoplay porém dempendendo do navegador talvez ele não toque, então junto colocamos o parametro: 'controls' que faz com que apareça o botão de play (ao clicar reproduzirá o audio)-->
+
+    <!--Tag 'audio': <audio src=""></audio>
+
+    Em 'src=' coloque o arquivo de audio: src="midia/sour-tennessee-red-song.mp3"
+
+    Use os parametros: 'controls' 'autoplay' (respectivamente) depois do nome do arquivo: <audio src="midia/sour-tennessee-red-song.mp3" controls autoplay></audio>-->
+
+    <p>Outra maneira de adicionar audio (quando não é no formato MP3)</p>
+
+    <!--Tem muito navegador que NÃO TEM tatal compatibilidade (com a MP3 por exemplo), então podemos utilizar OUTROS FORMATOS DE ARQUIVOS
+    
+    OS FORMATOS SÃO: MP3, WAV e OGG-->
+
+    <audio preload="metadata" autoplay controls loop>
+        
+        <source src="midia/sour-tennessee-red-song.mp3" type="audio/mpeg">
+        <source src="midia/sour-tennessee-red-song.ogg" type="audio/ogg">  <!--Isso é uma SUPOSIÇÃO, não temos esse arquivo baixado.-->
+        <source src="midia/sour-tennessee-red-song.wav" type="audio/wav">   <!--Isso é uma SUPOSIÇÃO, não temos esse arquivo baixado. Tentar sempre evitar esse tipo de arquivo pois ele é muito pesado, logo ele também vai pesar o site, podendo atrapalhar o seu desenpenho-->
+        <p>Infelizmente o seu navegador não consegue reproduzir audio. <a href="midia/sour-tennessee-red-song.mp3"></a>Clique aqui para baixar o arquivo MP3</p>
+        
+    </audio> 
+
+    <!--USE a tag 'audio', ao gerar o código base, '<audio src=""></audio>' APAGUE: 'src=""', FICANDO: '<audio></audio>' e escreva entre as tags 'audio' os 'sources' (clicar em: 'source:src' antes de dar enter)-->
+
+    <!--Em 'type=' coloque o tipo de midia, por exemplo o do MP3 é 'audio/mpeg' (acesse o site para ver mais tipos de Media Types)-->
+
+    <!--Lista de Media Types: https://www.iana.org/assignments/media-types/media-types.xhtml
+    
+    acesse esse site para procurar o tipo de media(arquivo) certo para colocar no atributo 'type='-->
+
+    <!--ATENÇÃO: A ORDEM DO ARQUIVO É IMPORTANTE! Primeiro ele vai tentar carregar o MP3, depois o OGG e por último o WAV (vai de cima para baixo). Se ele não conseguir carregar nenhum dos arquivos, irá aparecer a mensagem deixada entre as tags 'p' (se você tiver colocado alguma coisa)-->
+
+
+    <!--ALGUNS PARAMETROS (colocar dentro de audio, '<audio preload="metadata">'): 
+    'preload' possui 3 opções: 
+    auto (padrão): CUIDADO, ele só vai considerar que o site terminou de carregar quando terminar de produzir todo o audio; 
+    metadata: irá carregar apenas algumas informações do arquivo como nome do arquivo, data, duração...; 
+    none: não vai carregar absolutamente NADA, só quando o usuário clicar no play.
+
+    o comando 'autoplay' as vezes não pega dependendo do navegador, ele carrega o audio automaticamente assim que abrir o site ou quando ele for recarregado.
+
+    o comando 'loop' fará com que o audio recomesse automaticamente após ter terminado.-->
+
+
+</body>
+</html>

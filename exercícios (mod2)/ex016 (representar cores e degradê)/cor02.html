@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS (degradê)</title>
+    <style>
+        * {  /*Configurações globais das CSS '*'. Se eu não tivesse colocado esse 'height: 100%' a página estária toda dividida */
+            height: 100%;
+        }
+
+        body { 
+            background-image: linear-gradient(45deg, #7743CB,#B636A7, #E8496F, #F64D50, #FF7043, #FF9149,#FED652 );
+            background-attachment: fixed; /*deixa o degradê fixo*/
+        }
+    
+        /* Para fazer degradê se utiliza a propriedade 'background-image' junto com a função interna 'linear-gradiant', que a parece depois que da enter;*/
+
+        /*Dentro dos parenteses: 1º você vai indicar a direção (to right, left , top, bottom ou você pode colocar em graus, ex: 45deg usando o 'deg') e as cores, quantas cores você quiser*/ 
+
+        /* você também pode mexer com a porcentagem das cores dentro do degradê colocando depois do nome ou código da cor quantos por cento aquela cor vai ocupar no degradê*/
+        
+        body { 
+            background-image: radial-gradient(circle, #7743CB,#B636A7, #E8496F, #F64D50, #FF7043, #FF9149,#FED652 );
+            background-attachment: fixed; 
+        }
+        /* com o 'radial-gradiant(circle) ele faz o degradê em formato de circulo'*/
+        
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando Links Externnos</h1>
+    <p>Você pode acessar o meu <a href="https://samanthakevely.github.io/PrimeiroProjeto/">Repositório Público no GitHub.</a></p> 
+    
+    <!--O link dessa forma sobrepõe a pagina principal. Use o 'target=_"blank"' para que o link seja aberto em outra aba. Veja o exemplo com o link abaixo-->
+
+
+    <p>Acesse esse <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal no YouTube</a></p> 
+    
+    <!--Usar o 'target="_blank"' faz com que o conteúdo do link clicado seja aberto em outra aba e não na página que está aberta. Porém é recomendado que use os dois parametros: 'target="_blank" rel="external"'-->
+
+    <h1>Usando Links Interno</h1>
+    <p>Essa é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag02.html" rel="next" target="_self">Segunda Página</a></p> 
+    
+    <!--'rel="next"' indica que o link clicado é a próxima página (não necessariamente precisa ser a segunda pag.), isso facilita para o mecanismo de busca. Visualmente não acontecerá nada.
+        
+    'target="_self"' significa que o link será aberto na própria página (se você não colocar nenhum target isso também acontecerá).-->
+
+    <p>Você também pode acessar a nossa <a href="noticias/pag03.html" rel="next" target="_self">Página de Notícias</a></p> 
+    
+    <!--O arquivo 'pag03.html' está dentro da pasta 'noticia'. Você pode usar o atalho 'ctrl' + tecla 'espaço' para escolher a arquivo que será linkado
+    
+    'target="_self"' significa que o link será aberto na própria página (se você não colocar nenhum target isso também acontecerá).-->
+    
+    <h1>Links para Download</h1>
+    <p>Ao clicar no link o arquivo será baixado</p>
+    <ul>
+        <li><a href="livro/ATIVIDADE PRATICA - MODELO DE CAPA (1).pdf" download="ATIVIDADE PRATICA - MODELO DE CAPA (1).pdf" type="aplication/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/ATIVIDADE PRATICA - MODELO DE CAPA (1).zip" download="ATIVIDADE PRATICA - MODELO DE CAPA (1).zip" type="aplication/zip">Livro compactado em ZIP</a></li>
+    </ul>
+
+    <!--Para gerar um link para download é preciso ter o arquivo salvo (como no exemplo acima, o arquivo está salvo na pasta 'livro'). Código base de link 'a' com os atributos: 'download' onde você vai colocar o nome do arquivo que será baixado, e 'type' para indicar ao navegador que tipo de arquivo está sendo baixado, é onde você vai colocar o tipo do download-->
+
+    <!--Lista de Media Types: https://www.iana.org/assignments/media-types/media-types.xhtml
+    
+    acesse esse site para procurar o tipo de media(arquivo) certo para colocar no atributo 'type'-->
+</body>
+</html>

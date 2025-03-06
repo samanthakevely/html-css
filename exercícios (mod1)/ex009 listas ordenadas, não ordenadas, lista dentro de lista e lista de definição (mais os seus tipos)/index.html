@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <ol type="1"> <!--ordered list-->
+        <li>Acordar</li><!--list item-->
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Almoçar</li>
+        <li>Ir para o trabalho</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+
+    <!--Listas Ordenadas, no 'type=' você pode escolher entre 5 opções de ordem.-->
+        
+    <!--O primeiro tipo (type="1") é a de números, se você quiser definer qual o número que a lista vai começar, escreva: type="1" start="2" dentro de '<ol>'-->
+
+    <!--O segundo tipo (type="A") deixa a lista ordenada em letra do alfabeto em maiusculo-->
+
+    <!--O terceiro tipo (type="a") deixa a lista ordenada em letra do alfabeto em minusculo-->
+
+    <!--O quarto tipo (type="I") deixa em ordem de números romano em maiusculo-->
+
+    <!--O quinto tipo (type="i") deixa em ordem de números romano em minusculo-->
+
+
+    <h2>Listas Não Ordenadas</h2>
+    <ul type="circle"> <!--unordered list-->
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>  
+
+    <!--Listas Não Ordenadas, no 'type=' você pode escolher entre 3 opções 'desenho'.-->
+
+    <!--Primeira opção (type='disc') é o padrão, são as bolinhas pretas do lado do item-->
+
+    <!--Segunda opção (type='square'), são qudradinhos pretos do lado do item-->
+
+    <!--Terceira opção (type='circle') são bolinhas não preenchidas do lado do item-->
+
+
+    <h2>Minhas Linguagens Favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+
+    <!--Se você quiser que continue a sequencia do alfabeto por exemplo, escreva: '<ol type="a" start="5">' nesse caso, a proxima letra da lista será a letra 'e' que é a quinta letra do alfabeto-->
+
+
+    <h2>Lista Dentro de Lista</h2>    
+    <h3>Meus Jogos Favoritos</h3>
+    <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden</li>
+        </ul>
+        <li>SNES</li>
+        <ul type="square">
+            <li>Mario</li>
+            <li>Donkey Kong</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul type="square">
+            <li>Final Fantasy</li>
+            <li>Castlevania</li>
+        </ul>
+    </ol>
+
+    <!--DICA: Se você quiser renomear, mudar uma tag ou escrever A MESMA COISA em mais de um lugar, para que você não precise ir de um por um, você pode  PRECIONAR A TECLA 'alt' SELECIONAR O QUE DESEJA ALTERAR (CLICAR 2 VEZES EM TUDO QUE VOCÊ DESEJA ALTERAR SEM PARAR DE PRECIONAR A TECLA 'alt') e então fazer a alteração (todos os itens selecionados irão mudar para o que você escrever depois de fazer isso)
+    
+    Serve também para escrever A MESMA COISA em vários lugares DE UMA VEZ SÓ, você pode  PRECIONAR A TECLA 'alt' (CLICANDO 1 VEZ) nos lugares que você quer escrever e então escrever.-->
+
+    <h2>Lista de Definições</h2>
+    <dl> <!--definition list, é como se fosse um dicionário, você coloca um termo e a definição dele. a definição fica um pouco mais deslocada da margem do que o termo -->
+
+        <dt>HTML</dt> <!--'dt' termo-->
+        <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd> <!--'dd' descrição-->
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de Programação para a criação de interatividade de um site.</dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código-fonte / Pré-Formatação</h2>
+    <p>O comando document.getElementById('teste') é escrito em linguagem JavaScript.</p>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p> <!--Para deixar a fonte monoespaçada (cada caracter ocupara o mesmo tamanho de espaço) ps. selecione letra por letra para ver a diferença-->
+
+    <code>
+        num = int(input('Digite um número'))
+        if num % ==o:
+            print(f'O número {num} é PAR')
+        else:
+            print(f'O número {num} é IMPAR')
+        print('Fim do programa')
+    </code> <!--Se você quiser digitar um código e quer que apareça certinho com a identação, faça igual o exemplo abaixo-->
+    
+    <pre>
+        <code>
+        num = int(input('Digite um número'))
+        if num % ==o:
+            print(f'O número {num} é PAR')
+        else:
+            print(f'O número {num} é IMPAR')
+        print('Fim do programa')
+        </code>
+    </pre> <!--Tudo que for colocado dentro da tag 'pre' será considerado (espaço, quebras de linhas...)-->
+
+    <!--DICA: Para MANTER A IDENTAÇÃO MAS DIMINUIR A DISTANCIA DO CÓDIGO DA MARGEM (onde estão os número ao lado) selecione o texto e aperte a tecla 'shift' + 'tab'. Se você quiser DISTANCIAR DA MARGEM E MANTER A IDENTAÇÃO apenas selecione o texto e aperte a tecla 'tab'-->
+
+    <h2>Citações</h2>
+    <p>Como diria um pai de um amigo: <q>o computador é um burro muito rápido.</q></p> <!--A tag 'q' coloca aspas ao redor do texto selecionado (é melhor usar ela do que apenas digitar direto as aspas por que a tag 'q' dá sentido (semântica) PS. USAR APENAS QUANDO FOR UMA CITAÇÃO, caso contrario pode digitar as aspas direto)-->
+
+    <h2>Citações Completas</h2>
+    <p>Segundo Jeff Noble, no seu livro HTML para Leigos:</p>
+    <blockquote cite="https://books.google.com.br/books/about/HTML_XHTML_e_CSS_Para_Leigos.html?id=E8ZtDwAAQBAJ&redir_esc=y">
+        A diferença entre elementos inline e bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
+    </blockquote> 
+    <!--uma blockquote aparece deslocada (um pouquinho mais para dentro do que a margem do site)-->
+
+    <!--O 'cite=' NÃO MUDARÁ NADA VISUALMENTE no site, porém o macanismo de busca, o google, a parte interna do site, vai saber que essa frase está referenciando o livro (ou seja lá o que for) que está localizado no endereço que você colocou, mesmo que parcialmente, para que você possa manter os diretos daqueles  que produzem conteúdo-->
+
+    <h2>Abreviações</h2>
+    <p>Estou estudanto <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando.</p> <!--A tag 'abbr' serve para você colocar o significado de uma abreviação por exemplo. No navegador ao colocar o mouse em cima da sigla (nesse caso, HTML e CSS) aparecerá o que você escreveu depois de 'title='. Quanto a aparência (fica a palavra com uns pontilhados em baixo) você pode configurar depois com a CSS-->
+
+    <h2>Texto Invertido</h2>
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+
+
+    <!-- a tag 'bdo:l' (ltr) left to right (seria o texto normal, escrito do lado direito para o esquerdo).
+    a tag 'bdo:r' (rtl) right to left (seria o texto invertido, escrito do lado esquerdo para o direito-->
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--Compatibilidade com acentuação, o mesmo que eu coloquei no CSS.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Locais / Interno</title>
+    <link rel="stylesheet" href="style.css"> <!--tag para linkar uma página CSS. escreva 'link:css' (click, não dê enter)
+    
+    Para criar o arquivo direto pelo nome você pode utilizar a DICA-->
+
+    <!--Você pode utilizar mais de 1 link CSS (não tem nada nesse arquivo, é só uma demonstração)-->
+    <link rel="stylesheet" href="extra.css">  <!--Ele vai somar tudo que tem nas duas páginas CSS-->
+
+    <!--Você também pode mesclar os 3 métodos (nesta mesma página temos: um link para CSS externo, CSS interno dentro de 'head' e CSS inline dentro da tag 'p' lá em baixo), por exemplo:-->
+
+    <!--ORDEM DE PODER DOS MÉTODOS CSS: 1- INLINE(DENTRO DA TAG HTML), 2- INTERNO/LOCAL(NO HEAD) E 3- EXTERNO(LINK)-->
+
+    <style>
+
+        h1{
+            text-decoration: underline;
+        }
+    </style>  <!--Na página principal os títulos 'h1' ficaram sublinhados, mas nas outras páginas não. (é configuração de arquivo interno, só funcionará nesta página)-->
+</head>
+<body>
+    <h1>Capitulo 1</h1>
+    <h2>Capitulo 1.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium rerum necessitatibus, neque perspiciatis recusandae aspernatur ipsa veritatis. Laboriosam magnam deleniti sed iste, voluptatem eum quaerat accusantium dignissimos laborum molestiae fugit!</p>
+    <h2>Capitulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptate earum velit praesentium accusamus fugit, ullam perferendis optio quidem quod, illum ut commodi? Sunt voluptatibus, odio iure voluptates dignissimos nam?</p>
+    <h1>Capitulo 2</h1>
+    <h2>Capitulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos eum, magni veniam deleniti commodi dolore omnis esse maxime reiciendis possimus iusto! Assumenda nisi facilis incidunt fugiat atque nobis nihil!</p>
+    <p style="text-align: right;"><a href="paginadois.html" target="_self">Ir para a página 2</a></p>
+
+    <!--DICA (adicionar um link de uma página e depois cria-la): utiliazar a tag 'a' para adicionar um link e em 'href=' escrever o nome do link/página que será criada para ser linkada, ponha o cursor do mouse em cima do nome da página, aperte 'ctrl' + click (clicar no link). uma página será criada, o nome do arquivo será o que você colocar em 'href=' -->
+
+    <!--RECOMENDAÇÃO NA ESCOLHA DE QUAL MÉTODO USAR: Evitar ao máximo utilizar o CSS inline só se for uma coisa muito pontual/específica mesmo, CSS interno (no head) só colocar para estilos pequenos (se o estilo for crescendo muito mude para CSS externo), CSS externo, o mais versátil de todos, pode usar sem moderação, principalmente se o site tiver muitas páginas que vá utilizar estilos iguais/semelhantes.-->
+
+</body>
+</html>
