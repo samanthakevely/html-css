@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body {
             height: 100vh;
-            background-color: black;
+            /*background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover; 
+            background-attachment: fixed;*/
+
+            /*Shorthand background: (o size não funciona no shorthand apesar de está assim na documentação, COLOCAR ELE POR FORA)
+                        color > image > position > repeat > [size] > attachment*/
+
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -30,6 +37,12 @@
 <body>
     <main>
         <h1>Teste de imagem de fundo</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quos architecto ut nam quasi reiciendis saepe, voluptatem nihil vero debitis sunt provident a quis consequatur excepturi voluptas, delectus obcaecati tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae magni, mollitia sunt aliquam incidunt totam delectus voluptatibus. Earum officiis cupiditate totam enim facere, nostrum ad et, placeat nam cum mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, deleniti quae repudiandae repellat quasi eius consequuntur at eveniet dolores earum quis? Nulla harum omnis dignissimos reprehenderit perferendis aperiam modi excepturi.</p>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quos architecto ut nam quasi reiciendis saepe, voluptatem nihil vero debitis sunt provident a quis consequatur excepturi voluptas, delectus obcaecati tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae magni, mollitia sunt aliquam incidunt totam delectus voluptatibus. Earum officiis cupiditate totam enim facere, nostrum ad et, placeat nam cum mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, deleniti quae repudiandae repellat quasi eius consequuntur at eveniet dolores earum quis? Nulla harum omnis dignissimos reprehenderit perferendis aperiam modi excepturi.</p>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quos architecto ut nam quasi reiciendis saepe, voluptatem nihil vero debitis sunt provident a quis consequatur excepturi voluptas, delectus obcaecati tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae magni, mollitia sunt aliquam incidunt totam delectus voluptatibus. Earum officiis cupiditate totam enim facere, nostrum ad et, placeat nam cum mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, deleniti quae repudiandae repellat quasi eius consequuntur at eveniet dolores earum quis? Nulla harum omnis dignissimos reprehenderit perferendis aperiam modi excepturi.</p>
+
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quos architecto ut nam quasi reiciendis saepe, voluptatem nihil vero debitis sunt provident a quis consequatur excepturi voluptas, delectus obcaecati tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae magni, mollitia sunt aliquam incidunt totam delectus voluptatibus. Earum officiis cupiditate totam enim facere, nostrum ad et, placeat nam cum mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, deleniti quae repudiandae repellat quasi eius consequuntur at eveniet dolores earum quis? Nulla harum omnis dignissimos reprehenderit perferendis aperiam modi excepturi.</p>
     </main>
 </body>
